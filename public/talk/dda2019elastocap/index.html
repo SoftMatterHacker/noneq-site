@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.76.5" />
+  <meta name="author" content="Pat Spicer - Complex Fluids Group @ UNSW">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Thanks for giving me the time to talk about this today. This work was the focus of a really talented post-doc, Vincent Poulichet, who had the task of adapting some of my group’s past work for new applications in the inhaled drug delivery space. The work was a collaboration between my group and Daniela Traini’s group at U. Sydney and the Woolcock Institute, and was funded by our shared ARC Discovery Grant that ended last year.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://SoftMatterHacker.github.io/talk/dda2019elastocap/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#4caf50">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://SoftMatterHacker.github.io/index.xml" type="application/rss+xml" title="SoftMatterHacker.com">
+  <link rel="feed" href="https://SoftMatterHacker.github.io/index.xml" type="application/rss+xml" title="SoftMatterHacker.com">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://SoftMatterHacker.github.io/talk/dda2019elastocap/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@SoftMatterHackr">
+  <meta property="twitter:creator" content="@SoftMatterHackr">
+  
+  <meta property="og:site_name" content="SoftMatterHacker.com">
+  <meta property="og:url" content="https://SoftMatterHacker.github.io/talk/dda2019elastocap/">
+  <meta property="og:title" content="Selective shape change response by smart droplets | SoftMatterHacker.com">
+  <meta property="og:description" content="Thanks for giving me the time to talk about this today. This work was the focus of a really talented post-doc, Vincent Poulichet, who had the task of adapting some of my group’s past work for new applications in the inhaled drug delivery space. The work was a collaboration between my group and Daniela Traini’s group at U. Sydney and the Woolcock Institute, and was funded by our shared ARC Discovery Grant that ended last year.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-11-01T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-11-01T00:00:00&#43;00:00">
+  
+
+  
+  
+
+  <title>Selective shape change response by smart droplets | SoftMatterHacker.com</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">SoftMatterHacker.com</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/post/people/">
+            
+            <span>People</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="pub" itemscope itemtype="http://schema.org/Event">
+
+  
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Selective shape change response by smart droplets</h1>
+      <span class="pub-authors" itemprop="author">
+        
+      </span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Selective%20shape%20change%20response%20by%20smart%20droplets&amp;url=https%3a%2f%2fSoftMatterHacker.github.io%2ftalk%2fdda2019elastocap%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fSoftMatterHacker.github.io%2ftalk%2fdda2019elastocap%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fSoftMatterHacker.github.io%2ftalk%2fdda2019elastocap%2f&amp;title=Selective%20shape%20change%20response%20by%20smart%20droplets"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fSoftMatterHacker.github.io%2ftalk%2fdda2019elastocap%2f&amp;title=Selective%20shape%20change%20response%20by%20smart%20droplets"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Selective%20shape%20change%20response%20by%20smart%20droplets&amp;body=https%3a%2f%2fSoftMatterHacker.github.io%2ftalk%2fdda2019elastocap%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+      <br>
+    
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+          <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+            
+            Nov 1, 2019
+            <div class="talk-time">
+              
+                3:30 PM
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Event</div>
+          <div class="col-xs-12 col-sm-9">
+            
+            Drug Delivery Australia 2019
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Location</div>
+          <div class="col-xs-12 col-sm-9">Brisbane, QLD</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      <p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary001.jpeg" alt="Slide 1"></p>
+<p>Thanks for giving me the time to talk about this today. This work was the focus of a really talented post-doc, Vincent Poulichet, who had the task of adapting some of my group’s past work for new applications in the inhaled drug delivery space. The work was a collaboration between my group and Daniela Traini’s group at U. Sydney and the Woolcock Institute, and was funded by our shared ARC Discovery Grant that ended last year.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary002.jpeg" alt="Slide 2"></p>
+<p>Today I want to talk about the process of depositing particles onto biological surfaces and how to engineer it better. In consumer products, we need to deposit emulsion droplets of silicone, the active softening agent in shampoos and laundry detergents, onto hair or fabric fibers.These are the most expensive ingredients in these products, but they deposit at a terribly low efficiency, ~1%, meaning most of the material is wasted. I was really pleased to hear from our Plenary speaker this morning, Samir Mitragotri, that a similarly low level of delivery efficiency plagues many types of drugs being delivered. As a result, even small increases are then significant from a performance and sustainability perspective. Two key contributions gave us hope for our own delivery problem. Samir’s group showed that even biological processes can be hacked by purely physical attributes, like particle aspect ratio. Pat Doyle’s group then showed that shape can be used to alter particle flow direction to enhance deposition. All we then needed was a way to make emulsion droplets, the most spherical thing you can find, adopt and retain non-spherical shapes.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary003.jpeg" alt="Slide 3"></p>
+<p>Drops can hold a non-spherical shape if something offsets the interfacial tension trying to force them into a spherical shape. We showed that adding elasticity to the droplet can do  just this, here the droplets are an oil permeating a colloidal gel of waxy solids. The resulting viscoelastic drops are then able to retain a liquid surface for wetting targets, and their shape stability is designed by balancing the droplet yield stress with its interfacial tension. You can see these drops have the ability to hold a shape after their coalescence arrests.  Shapes can then be molded into rods, for example by microfluidic means. Because they retain their liquid properties, they can undergo shape changes as a result of surface energy driving forces, as we see here for a third droplet added to an existing pair, that is then rearranged into a more compact shape automatically.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary004.jpeg" alt="Slide 4"></p>
+<p>A simple force balance shows how these shapes are stable, with droplet yield stress elasticity offsetting interfacial tension. The equation also shows this balance can be disturbed by changing the key variables. This offers a significant benefit Rinsing, as done for all consumer product use, increases tension and triggers collapse of already deposited droplets, while heating reduces yield stress and crushed the droplets by interfacial tension.The performance enhancement of deposition, and retention, is ~30%, so the work was patented in US and Europe and forms the basis for your Pantene shampoo now.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary005.jpeg" alt="Slide 5"></p>
+<p>Around that time, I left P&amp;G and started at UNSW, and Daniela Traini and Paul Young had the idea to adapt these drops for use as inhale-able particles. While shape change and retention is valuable, requiring an external trigger is not helpful in the nose or lungs. We needed a way to make these particles smarter to be able to sense and respond to their environment without an external trigger. We got an ARC Discovery grant to do this work, one focus was a mechanism nature uses to drive response to a local environment: elastocapillarity. Here fluid capillary forces, like surface tension, act in concert with the elastic response of solid-like materials to drive movement. This is seen when a liquid drop is on an elastic solid, and when adhesion pulls soft solids together, and is used to move leaves, fold pollen, and shoot seeds surprising distances.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary006.jpeg" alt="Slide 6"></p>
+<p>What Vincent realized was that he could adapt these models to assess and design our system so that it wraps around a surface it is touching purely as a result of elastocapillary response.  Specifically, the rods respond to the curvature of the surface they touch and only wrap around surfaces below a threshold curvature because of the force exerted by the liquid meniscus of the droplet. Two approaches can be used to describe what might happen in these cases.  The first is energetic, comparing the energy change upon wrapping a smaller cylinder with radius r around a larger cylindrical target with radius R. If favorable, wrapping is preferred to simply wetting at a contact point.  A more realistic, but complex, description accounts for the Laplace pressure exerted by the interfacial tension and the partial stabilizing action of the Euler buckling criterion. Both approaches provide a criterion for the threshold target radius above which wrapping will occur, and that it scales with the rod-shaped droplet radius to the power of 3/2.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary007.jpeg" alt="Slide 7"></p>
+<p>We test the theory using a small, surface-treated rod target whose radius we can vary by using different-sized glass capillaries. Extruding structured rod droplets of different radii and bringing them into wetting contact with the target allows us to directly observe whether wrapping occurs, or not, and document the dimensions. As the example images show, a larger relative target radius induces wrapping in two different rod droplet systems, but as the radii approach the same magnitude wrapping is not possible.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary008.jpeg" alt="Slide 8"></p>
+<p>Plotting all the data obtained from the microscopic experiments and plotting the predicted scaling relationship shows the boundary between wrapping and non-wrapping follows the 3/2 scaling quite well.  A fit to the data yields a ratio of elastic modulus, E, to interfacial tension, \gamma, that agrees well with the system parameters. Despite its simplicity, we find the theory to be a useful description of the wrapping and retention behavior for structured droplets.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary009.jpeg" alt="Slide 9"></p>
+<p>The theory then allows is to develop a design guide for different target tissues or structures. We can then create application-specific materials. An example is the targeting of anti-dandruff actives in shampoo to the base of a hair, where curvature is lower than at the thinner upper end of the hair shaft. The base of the hair shaft is where pesky dandruff-causing fungus tend to reside, near the surface of the follicle.</p>
+<p><img src="/img/2019DDA/2019-DDA-Brisbane-Elastocapillary010.jpeg" alt="Slide 10"></p>
+<p>So, we find that shape can be designed and controlled in small liquid droplets with a range comparable to solid particles, all by careful design of the fluid rheology. Shape-change can be applied using external triggers, but a form of sensing can be exhibited by the shaped droplets, via elastocapillarity, in response to local curvature of a target. This simple, but smart, effect enables selectivity in droplet deposition and retention, allowing the enhanced delivery to be applied in systems where external triggers can’t be practicially or safely applied. Best of all, this is a purely physical effect: if you have the right rheology and wetting it can be achieved.  And these things are easy to design into different types of systems.</p>
+
+    </div>
+
+    
+
+
+
+
+
+  </div>
+</div>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      © 2020 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
