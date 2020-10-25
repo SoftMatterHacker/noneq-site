@@ -42,8 +42,8 @@ projects = []
 tags = []
 
 # Links (optional).
-url_pdf = "https://www.aiche.org/resources/publications/cep/2020/july/complex-fluid-formulations-source-inspiration-and-innovation"
-url_preprint = ""
+url_pdf = ""
+url_preprint = "https://www.aiche.org/resources/publications/cep/2020/july/complex-fluid-formulations-source-inspiration-and-innovation"
 url_code = ""
 url_dataset = ""
 url_project = ""
